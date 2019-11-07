@@ -1,8 +1,9 @@
-$(document).ready(function()
+$(function()
 {
 
     $("#calculate").click(function() {
 
+        console.log('you are here');
         //there must be a variable for the body weight of the lifter, the total weight lifted,
         //the six values for either a male or female lifter, a Wilks score to be calculated, and a coefficient
         var bodyweight = $("#bodyweight");
@@ -37,15 +38,7 @@ $(document).ready(function()
             wilksScore = weightLifted * coefficient;
         }
 
-        //clear the assigned div element of any previous answers
-        $("#score").empty();
-
-        //display the calculated Wilks score
-        var displayText = $("<p></p>").text(wilksScore);
-        $("#score").append(displayText);
-        $("#score").fadeIn("slow");
-
-
+        console.log(wilksScore);
 
 
 
